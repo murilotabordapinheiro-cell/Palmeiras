@@ -1,0 +1,117 @@
+/* =====================================================================
+   MODELO INICIAL — Meu Site (3 páginas)
+   Este CSS é COMPARTILHADO pelas 3 páginas (index, sobre, contato).
+   O visual abaixo é só um ponto de partida: mude cores, fontes, tamanhos
+   e layout para deixar com a SUA cara. 💪
+   ===================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  color: #1e293b;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+/* ---------- MENU (topo) ---------- */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: #1e293b;
+  padding: 1rem 1.5rem;
+}
+.logo { color: #a78bfa; font-weight: 800; font-size: 1.2rem; }
+.menu { display: flex; gap: 1rem; }
+.menu a {
+  color: #1e6fda;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+.menu a:hover { background: #334155; }
+.menu a.ativo { background: linear-gradient(90deg, #089231, #034e19); color: #fff; }
+
+/* ---------- CONTEÚDO ---------- */
+main { max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem; }
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(160deg, #18d327, #00330b);
+  color: #fff;
+  border-radius: 16px;
+}
+.hero h1 { font-size: 2rem; margin-bottom: 0.6rem; }
+.hero p { max-width: 520px; margin: 0 auto 1.2rem; opacity: 0.95; }
+
+.botao {
+  display: inline-block;
+  background: #fff;
+  color: #7c3aed;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+.botao:hover { transform: scale(1.05); }
+
+/* Cards (exemplo com flexbox — tente trocar por grid!) */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.card {
+  flex: 1 1 220px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.3rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+.card h2 { margin-bottom: 0.4rem; font-size: 1.1rem; }
+
+.conteudo { background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1.6rem; }
+.conteudo h1 { margin-bottom: 0.6rem; }
+.conteudo h2 { margin: 1rem 0 0.4rem; }
+.conteudo ul { margin-left: 1.2rem; }
+
+/* ---------- FORMULÁRIO ---------- */
+.form { margin-top: 1rem; }
+.campo { margin-bottom: 1rem; }
+.campo label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+.campo input, .campo textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.campo input:focus, .campo textarea:focus {
+  outline: 3px solid rgba(124,58,237,0.4);
+  border-color: #7c3aed;
+}
+
+/* ---------- RODAPÉ ---------- */
+.rodape {
+  text-align: center;
+  padding: 1.5rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* ---------- RESPONSIVO (exemplo de media query) ---------- */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.5rem; }
+  .menu { width: 100%; justify-content: center; }
+}
